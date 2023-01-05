@@ -41,9 +41,8 @@ app.post('/share-opinion', async function (req, res) {
   const topicId = submittedData['topic-id'];
   const opinionData = {
     title: submittedData.title,
-    user: submittedData.user,
     text: submittedData.text,
-  };
+  }
   await addNewOpinion(topicId, opinionData);
   res.redirect(`/topics/${topicId}`);
 });
