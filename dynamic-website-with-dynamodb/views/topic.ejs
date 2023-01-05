@@ -23,10 +23,6 @@
           <input type="text" name="title" id="title" required />
         </div>
         <div class="form-control">
-          <label for="user">Your name</label>
-          <input type="text" name="user" id="user" required />
-        </div>
-        <div class="form-control">
           <label for="text">Your opinion</label>
           <textarea id="text" name="text" rows="5" required></textarea>
         </div>
@@ -44,8 +40,9 @@
     </header>
     <main>
       <section id="statement">
-        <h1><%= topic.title %></h1>
-        <address>Shared by <%= topic.user %>.</address>
+        <h1>
+          <%= topic.title %>
+        </h1>
         <p><%= topic.statement %></p>
         <button class="btn" id="open-dialog-btn">Share your opinion</button>
       </section>
@@ -55,8 +52,9 @@
           <% for (const opinion of topic.opinions) { %>
           <li>
             <article>
-              <h2><%= opinion.title %></h2>
-              <address>By <%= opinion.user %>.</address>
+              <h2>
+                <%= opinion.title %>
+              </h2>
               <p><%= opinion.text %></p>
             </article>
           </li>
